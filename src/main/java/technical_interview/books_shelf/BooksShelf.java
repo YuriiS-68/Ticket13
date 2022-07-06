@@ -6,14 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BooksShelf {
-    //на вход получаю список названий книг
-    //распределить книги так, чтобы на каждой полке было примерно одинаковое кол-во книг
-    //книги должны быть отсортированы по алфавиту с первой и до последней полки
-    //количество полок константное 5 штук
-    //вернуть книги распределенные по полкам
-
     public static void main(String[] args) {
-
         getShelvesOfBooks(getBooks());
     }
 
@@ -93,9 +86,5 @@ public class BooksShelf {
         books.add(book16);*/
 
         return books;
-    }
-
-    private static Book getFirstSortedBook(List<Book> books){
-        return books.stream().min(Comparator.comparing(Book::getName)).get();
     }
 }
